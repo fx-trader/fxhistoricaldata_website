@@ -1,7 +1,9 @@
-<p>
-  <strong>Title:</strong>
-  <%= @instrument.name %>
-</p>
- 
-<%= link_to 'Back', instruments_path %>
+<h2><%= @instrument.name %></h2>
 
+<hr />
+<h3>Data download</h3>
+<ul>
+<li><a href='/download/<%= @instrument.name %>?t=hour'>Hourly</a></li>
+<li><a href='/download/<%= @instrument.name %>?t=day'>Daily</a></li>
+</ul>
+<hr />
