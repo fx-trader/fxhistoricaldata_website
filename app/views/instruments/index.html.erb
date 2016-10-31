@@ -1,0 +1,5 @@
+<ul>
+  <% @instruments.each do |instrument| %>
+      <li><%= link_to instrument.name, controller: "instruments", action: "show", id: instrument.name %></li>
+  <% end %>
+</ul>
