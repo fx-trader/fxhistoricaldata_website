@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: fxhistoricaldata_production
-  username: fxhistoricaldata
+  username: <%= ENV['MYAPP_DATABASE_USER'] %>
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
