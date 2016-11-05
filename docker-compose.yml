@@ -8,6 +8,8 @@ services:
       - /root/mysql_website:/var/lib/mysql
   web:
     build: .
+    env_file:
+      - '.env.web'
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
       - .:/myapp
